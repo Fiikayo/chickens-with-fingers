@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartNewActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/startNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/startNew"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/enterTimeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+    <TextView
+        android:id="@+id/enterTimeView"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/enterTime"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/enterPhoneView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startNew" />
+
+    <TextView
+        android:id="@+id/hourView"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/hours"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/hourPicker"
+        app:layout_constraintEnd_toStartOf="@+id/minuteText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterTimeView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/minuteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="395dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/minutes"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/minutePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hourView"
+        app:layout_constraintTop_toBottomOf="@+id/enterTimeView" />
+
+    <NumberPicker
+        android:id="@+id/hourPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/minutePicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourView" />
+
+    <NumberPicker
+        android:id="@+id/minutePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        app:layout_constraintStart_toEndOf="@+id/hourPicker"
+        app:layout_constraintTop_toBottomOf="@+id/minuteText" />
+
+    <TextView
+        android:id="@+id/enterPhoneView"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/enterPhone"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/enterTimeView"
+        app:layout_constraintTop_toBottomOf="@+id/startNew" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="94dp"
+        android:onClick="onStartClick"
+        android:text="@string/start"
+        app:layout_constraintEnd_toStartOf="@+id/editPhone"
+        app:layout_constraintStart_toEndOf="@+id/minutePicker"
+        app:layout_constraintTop_toBottomOf="@+id/enterPhoneView" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="96dp"
+        android:hint="@string/phonePrompt"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPhoneView" />
+
+</android.support.constraint.ConstraintLayout>

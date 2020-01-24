@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Where Am I?</string>
+    <string name="back">Back</string>
+    <string name="endAdventure">End Adventure</string>
+    <string name="enterPhone">Enter Phone Number to Send Messages to</string>
+    <string name="enterTime">Enter Time Interval to Send Text Messages</string>
+
+    <string name="viewPast">Possible View Past Adventures</string>
+    <string name="startNew">Start A New Adventure</string>
+    <string name="start">Start</string>
+    <string name="timePrompt">Time Interval in Minutes</string>
+    <string name="phonePrompt">Phone Number</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="restart">Restart Timer</string>
+    <string name="stop">Stop Timer</string>
+</resources>
